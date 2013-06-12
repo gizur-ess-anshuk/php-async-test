@@ -6,7 +6,8 @@ echo "Output received : " . PHP_EOL;
 
 $start_time = time();
 
-echo $output = file_get_contents("http://localhost/php-async-test/async.php");
+//echo $output = file_get_contents("http://localhost/php-async-test/async.php");
+echo $output = shell_exec("curl http://localhost/php-async-test/async.php");
 
 $end_time = time();
 

@@ -27,3 +27,4 @@ if (session_id()) session_write_close();
 // background process starts here
 // user should never have to wait for 5 seconds
 sleep(5);
+shell_exec('touch /tmp/temp001');
