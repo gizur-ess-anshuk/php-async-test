@@ -19,7 +19,13 @@ if (strpos($output, "Here's my awesome web page") === false) {
 }
 
 if ($fetch_time < 5) {
-	echo PHP_EOL . "Test success." .PHP_EOL;
+
+	if (file_exists('/tmp/php_async_test'))
+		echo PHP_EOL . "Test success." .PHP_EOL;
+	else
+		echo PHP_EOL . "Test Failed. Background process did not execute." .PHP_EOL;
+
+
 } else {
 	echo PHP_EOL . "Test Failed. Took more than 5 seconds" . PHP_EOL;
 }

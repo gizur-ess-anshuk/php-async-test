@@ -3,7 +3,8 @@
 //Continue to run script even when the connection is over
 ignore_user_abort(true);
 set_time_limit(0);
-
+if (file_exists('/tmp/php_async_test'))
+	unset('/tmp/php_async_test');
 
 // buffer all upcoming output
 ob_start();
@@ -27,4 +28,4 @@ if (session_id()) session_write_close();
 // background process starts here
 // user should never have to wait for 5 seconds
 sleep(5);
-shell_exec('touch /tmp/temp001');
+shell_exec('touch /tmp/php_async_test');
