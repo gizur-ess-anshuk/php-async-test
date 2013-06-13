@@ -10,3 +10,4 @@ execution of php script after closing of the http connection
 2)  run the test
 
     php test.php
+    node test.js

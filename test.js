@@ -1,3 +1,9 @@
+/**
+ * Javascript AJAX call to test async php code
+ *
+ * anshuk.kumar@essindia.co.in
+ */
+
 $ = require('jquery');
 
 var starttime = new Date().getTime() / 1000;
